@@ -1,20 +1,21 @@
 .header {
   width: 100%;
-  height: 78px;
+  min-height: 78px;
   background: #050505;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 60px;
-
   position: relative;
+  gap: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -27,6 +28,7 @@
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 42px;
 }
 
@@ -37,6 +39,9 @@
   font-weight: 600;
   padding-bottom: 8px;
   transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .nav a:hover {
@@ -52,63 +57,117 @@
   background: #00d9ff;
   color: #000;
   text-decoration: none;
-
   padding: 14px 34px;
-
   font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-
   transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .buy-btn:hover {
   transform: translateY(-2px);
 }
 
-@media (max-width: 992px) {
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid rgba(0, 217, 255, 0.45);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* NOTEBOOK */
+@media (max-width: 1200px) {
   .header {
-    padding: 0 25px;
+    padding: 0 35px;
   }
 
   .nav {
-    gap: 20px;
+    gap: 28px;
   }
 
   .buy-btn {
-    padding: 12px 20px;
+    padding: 12px 24px;
     font-size: 12px;
   }
 
   .logo {
-    height: 45px;
+    height: 46px;
   }
 }
 
+/* MOBILE COM HAMBURGER */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    gap: 15px;
+    min-height: 72px;
+    padding: 0 18px;
+    flex-direction: row;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #050505;
+    padding: 26px 18px;
+    flex-direction: column;
+    gap: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.25);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .buy-btn {
+    display: none;
   }
 }
 
-.nav a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
+  .header {
+    min-height: 68px;
+    padding: 0 14px;
+  }
 
-.buy-btn {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  .logo {
+    height: 36px;
+  }
+
+  .nav {
+    top: 68px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 25px;
+  }
 }
