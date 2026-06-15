@@ -1,0 +1,300 @@
+.contact-page {
+  min-height: calc(100vh - 82px);
+  background: #080808;
+  color: #fff;
+  padding: 34px 64px 70px;
+}
+
+/* TOPO */
+.contact-intro {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.contact-intro h1 {
+  margin: 0 0 14px;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.contact-intro h1 span {
+  color: #00d9ff;
+}
+
+.contact-intro p {
+  margin: 0;
+  max-width: 720px;
+  color: #b8c2c6;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* CARD GRANDE PRINCIPAL */
+.contact-panel {
+  width: 100%;
+  margin: 0 0 80px;
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 18px;
+}
+
+.contact-form {
+  min-height: 430px;
+  background: #1b1b1b;
+  border: 1px solid rgba(0, 217, 255, 0.45);
+  padding: 42px 34px;
+}
+
+.contact-form h2,
+.support-box h2 {
+  margin: 0 0 34px;
+  color: #c7f7ff;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 22px;
+}
+
+.contact-form label span {
+  display: block;
+  margin-bottom: 8px;
+  color: #b8c2c6;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: #101010;
+  border: none;
+  border-bottom: 1px solid #3c3c3c;
+  color: white;
+  padding: 14px 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 110px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 250px;
+  height: 50px;
+  border: none;
+  background: #00d9ff;
+  color: #031014;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* LADO DIREITO */
+.contact-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px;
+}
+
+.support-box {
+  background: #2b2b2b;
+  padding: 34px;
+}
+
+.community-box {
+  background: #101010;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  padding: 34px;
+}
+
+.support-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.support-item i,
+.faq-list i {
+  color: #00d9ff;
+  font-size: 18px;
+}
+
+.support-item strong {
+  display: block;
+  font-size: 13px;
+}
+
+.support-item p {
+  margin: 4px 0 0;
+  color: #b8c2c6;
+  font-size: 13px;
+}
+
+.community-box span {
+  display: block;
+  margin-bottom: 18px;
+  color: #9aa3a8;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.community-box a {
+  height: 46px;
+  padding: 0 16px;
+  margin-bottom: 12px;
+  background: #2b2b2b;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* FAQ */
+.faq-header {
+  width: 100%;
+  margin: 0 0 42px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.faq-header span {
+  flex: 1;
+  height: 1px;
+  background: #00d9ff;
+}
+
+.faq-header h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #c7f7ff;
+  font-weight: 900;
+}
+
+.faq-list {
+  width: 100%;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.faq-list article {
+  min-height: 160px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 28px;
+}
+
+.faq-list h3 {
+  margin: 16px 0 12px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.faq-list p {
+  margin: 0;
+  color: #b8c2c6;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* BANNER FINAL */
+.performance-banner {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.performance-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.25) brightness(0.95) contrast(1.12);
+  display: block;
+}
+
+.performance-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.12),
+    rgba(0, 0, 0, 0.35)
+  );
+  pointer-events: none;
+}
+
+.performance-banner div {
+  position: absolute;
+  left: 34px;
+  bottom: 28px;
+  z-index: 2;
+}
+
+.performance-banner h2 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.34);
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.performance-banner strong {
+  display: block;
+  color: #00d9ff;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .contact-page {
+    padding: 30px 22px 55px;
+  }
+
+  .contact-intro h1 {
+    font-size: 38px;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .performance-banner {
+    height: 220px;
+  }
+}

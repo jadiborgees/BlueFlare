@@ -1,0 +1,75 @@
+<section class="products-page">
+
+  <section class="products-hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h1>NOSSOS PRODUTOS</h1>
+      <p>
+        SUPLEMENTAÇÃO DE ALTA VOLTAGEM PARA QUEM NÃO ACEITA O COMUM.
+        EXPLODA SEU POTENCIAL GENÉTICO.
+      </p>
+      <div class="hero-line"></div>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="products-top">
+      <span>Mostrando {{ produtos.length }} resultados</span>
+
+      <select>
+        <option>Ordenar: Mais Populares</option>
+        <option>Menor Preço</option>
+        <option>Maior Preço</option>
+      </select>
+    </div>
+
+    <div class="products-grid">
+      <div
+        class="product-card"
+        *ngFor="let produto of produtos"
+        (click)="abrirProduto(produto)"
+      >
+        <div class="product-image">
+          <img [src]="produto.imagem" [alt]="produto.nome">
+        </div>
+
+        <div class="product-info">
+          <h3>{{ produto.nome }}</h3>
+          <p>{{ produto.categoria }}</p>
+
+          <div class="product-bottom">
+            <strong>{{ produto.preco }}</strong>
+
+            <button type="button" (click)="$event.stopPropagation()">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="product-modal" *ngIf="produtoSelecionado">
+    <div class="modal-card">
+      <button class="close-btn" type="button" (click)="fecharProduto()">×</button>
+
+      <img [src]="produtoSelecionado.imagem" [alt]="produtoSelecionado.nome">
+
+      <div class="modal-info">
+        <span>{{ produtoSelecionado.categoria }}</span>
+        <h2>{{ produtoSelecionado.nome }}</h2>
+        <p>{{ produtoSelecionado.descricao }}</p>
+
+        <ul>
+          <li *ngFor="let item of produtoSelecionado.detalhes">
+            {{ item }}
+          </li>
+        </ul>
+
+        <strong>{{ produtoSelecionado.preco }}</strong>
+      </div>
+    </div>
+  </div>
+
+</section>

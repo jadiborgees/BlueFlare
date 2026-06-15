@@ -1,0 +1,27 @@
+<header class="header">
+    <div class="brand">
+        <img src="/assets/images/logo-blueflare.png" alt="Blue Flare" class="logo" />
+    </div>
+
+    <nav class="nav">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            Home
+        </a>
+
+        <a routerLink="/produtos" routerLinkActive="active">
+            Produtos
+        </a>
+
+        <a routerLink="/quem-somos" routerLinkActive="active">
+            Quem Somos
+        </a>
+
+        <a routerLink="/contato" routerLinkActive="active">
+            Contato
+        </a>
+    </nav>
+
+    <a class="buy-btn" routerLink="/contato">
+        COMPRE CONOSCO
+    </a>
+</header>
